@@ -1,0 +1,25 @@
+<h1>Fuck me Article</h1>
+<h3><%=@article.title%></h3>
+<p><%= @article.text%></p>
+<div>
+	<h2>comments</h2>
+	<%= render @article.comments%>
+</div>
+<div>
+	<%= form_for ([@article , @article.comments.build]) do |f| %>
+		<h2>Add a comment</h2>
+		<div>
+		<%=f.label :commenter%>
+		<%= f.text_field :commenter%>
+		</div>
+		<div>
+			<%= f.label :body%>
+			<%= f.text_area :body%>
+		</div>
+		<div>
+			<%= f.submit :"fuck you"%>
+		</div>
+	<%end%>
+</div>
+<h3><%= link_to "creating another article", new_article_path%></h3>
+<h3><%= link_to "articles list", controller: 'articles'%></h3>

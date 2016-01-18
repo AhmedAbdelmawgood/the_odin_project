@@ -1,0 +1,78 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: arial,sans-serif;
+}
+.clear{
+	clear: both;
+	height: 0px;
+	width: 100%;
+	visibility: none;
+}
+.container-full{
+	width: 100%;
+	position: relative;
+	height: 70px;
+}
+.navbar{
+	width: 350px;height: 50px;
+	position: absolute;right: 5px;
+	padding: 10px;
+}
+.navbar>div:nth-of-type(1){
+	width:280px;height:50px;
+	float: left;
+}
+.navbar a{
+	text-decoration: none;
+	color: black;font-size: 16px;
+	display:block;float: right;
+	width:50px;height: 30px;
+	margin: 0 10px;
+	padding:10px 0px;text-align: center; 
+	 
+}
+.icon{
+	background: url(imgs/apps.png) no-repeat 15px 35%;
+}
+.navbar a:hover{
+	text-decoration: underline;
+}
+.navbar div:nth-of-type(2){
+	width:70px;height:50px;
+	float: right;
+
+}
+.navbar button{
+	width:70px;height:35px;
+	padding:5px;margin: 0 10px;
+	background-color:#4683ea;
+	color: white;
+	display: block;
+}
+.lo-da{
+	width: 980px;
+	margin: 10px auto;
+	text-align: center;
+}
+.lo{
+	width: 480px;
+	margin: 0 auto;
+	padding-top: 80px;
+	height: 270px;
+	background: url(imgs/GoogleLogo.jpg) no-repeat 50% 140px;
+	background-size:480px 200px; 
+}
+.da{
+	width: 980px;
+	margin: 0 auto;
+}
+input[type="text"]{
+   padding: 10px;
+   width: 580px;
+   display: block;
+   margin: 10px auto 35px auto;
+}
+input[type="submit"]{
+	padding: 15px;
+}
