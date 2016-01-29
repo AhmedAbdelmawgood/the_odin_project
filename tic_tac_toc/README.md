@@ -17,5 +17,8 @@ R is the right column
 
 M is the middle column 
 
-the user enter the two symbol so it be (t(l,r,or m), m(l,r, or m), b(l,r, or m))
+the user enter the two symbol so it be 
+
+#t(l,r,or m)   m(l,r, or m)   b(l,r, or m) 
+
 
