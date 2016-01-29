@@ -2,7 +2,7 @@ module Mechanism
 
   @@round_number = 0
   def check(cells, player_sym)
-    return winner(cells, player_sym)
+    return winner(cells)
     if round_number
       puts "No one had won!!"
       exit
@@ -21,26 +21,39 @@ module Mechanism
     return false
   end
 
-  def winner(cells, player_sym)
-    (1..3).each {|x|  return true if (cells[x].uniq.length == 1) && (cells[x].uniq.include?player_sym) } #check the win in the row
+  def winner(cells)
+    return true if check_the_column_win(cells) #check the win in the row
+    return true if check_the_vertical_win(cells)
+    return true if check_the_inclined_win(cells)
+    false
+  end
+
+  def check_the_column_win(cells)
+    (1..3).each {|x|  return true if ((cells[x].uniq.length == 1) && !(cells[x].include?"")) }
+    false
+  end
+  def check_the_vertical_win(cells)
     n = []
     (0..2).each do |num| #check the win in the column
       (1..3).each {|x| n << cells[x][num]}
       return true if n.uniq.length == 1 && !(n.include?"")
       n=[]
       end
-      (1..3).each do |x| #test the vertical win
-        n << cells[x][x-1]
+      false
+  end
+
+  def check_the_inclined_win(cells)
+    n=[]          #first case
+    (1..3).each do |x|
+      n << cells[x][x-1]
+    end
+      return true if n.uniq.length == 1 && !(n.include?"")
+    n = []          #second case
+    (1..3).each do |x|
+      n << cells[x][3-x]
       end
-        return true if n.uniq.length == 1 && !(n.include?"")
-      n = []
-
-      (1..3).each do |x| #test the second vertical win
-        n << cells[x][3-x]
-        end
-
-        return true if n.uniq.length == 1 && !(n.include?"")
-    false
+      return true if n.uniq.length == 1 && !(n.include?"")
+      false
   end
 
   def convert_to_coordinate(input)
