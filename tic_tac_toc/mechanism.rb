@@ -22,13 +22,13 @@ module Mechanism
   end
 
   def winner(cells)
-    return true if check_the_column_win(cells) #check the win in the row
+    return true if check_the_row_win(cells) #check the win in the row
     return true if check_the_vertical_win(cells)
     return true if check_the_inclined_win(cells)
     false
   end
 
-  def check_the_column_win(cells)
+  def check_the_row_win(cells)
     (1..3).each {|x|  return true if ((cells[x].uniq.length == 1) && !(cells[x].include?"")) }
     false
   end
