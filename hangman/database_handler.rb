@@ -11,7 +11,7 @@ class The_database
   #private :format_file
   def format_file
     @data = @data.inject({}) do |hash, word|
-      word = word[0..word.length-3]
+      word = word[0..word.length-3] #remove the /r/n from the words 
       first_letter = word[0].upcase.to_sym
       hash[first_letter] ||= []
       hash[first_letter] << word.downcase

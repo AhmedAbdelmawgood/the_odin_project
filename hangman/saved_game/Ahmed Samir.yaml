@@ -1,33 +1,37 @@
 ---
 :player_name: Ahmed Samir
 :final_answer:
-- q
+- j
+- o
+- c
 - u
-- i
-- n
-- q
-- u
-- e
-- n
-- n
-- i
-- a
 - l
-:turns_number: 10
+- a
+- r
+:turns_number: 1
 :grid_container:
 - _
-- _
-- _
-- _
-- _
-- _
-- _
-- _
-- _
-- _
+- o
+- c
+- u
+- l
 - a
-- _
+- r
 :user_input_collection:
 - a
 - c
-- "["
+- "]"
+- ''
+- e
+- u
+- h
+- o
+- f
+- t
+- r
+- b
+- p
+- s
+- l
+- n
+- d

@@ -41,6 +41,4 @@ class Hangman
     puts "the final answer is #{@final_answer.join} "
   end
   private
-
-
 end

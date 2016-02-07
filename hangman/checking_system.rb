@@ -1,10 +1,16 @@
 module Mechanism
 
   def end_detector(answer)
-    return false if right_choice(answer) == :partial
-    puts "congratulation"; return true if right_choice(answer) == :full
-    puts "Gaveover good luck next time"; return true if verify_trials_number
-    false
+    return false  if right_choice(answer) == :partial
+    if right_choice(answer) == :full
+      puts "A7A ya omar ya 3ali"
+      return true
+    end
+    if verify_trials_number
+      puts "you lost good luck next time"
+      return true
+    end
+    return false
   end
   def verify_trials_number
     puts @turns_number
