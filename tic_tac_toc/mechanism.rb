@@ -57,7 +57,7 @@ module Mechanism
   end
 
   def convert_to_coordinate(input)
-    answer = clearify(input)
+    answer = input
     coordinate = ["",""]
     case answer[0]
     when "t" then coordinate[0] = 1
@@ -72,11 +72,13 @@ module Mechanism
   coordinate
   end
 
-  def clearify(input)
+  def clearify
     begin
+      input = gets.chomp
       raise "you enterd a wrong answer" if input[/^.*(tl)|(tm)|(tr)|(ml)|(mm)|(mr)|(bl)|(bm)|(br)/i].nil?
       input[/^.*(tl)|(tm)|(tr)|(ml)|(mm)|(mr)|(bl)|(bm)|(br)/i]
-    rescue
+    rescue => e
+      puts e
       retry
     end
   end

@@ -25,7 +25,7 @@ class Game
   def player_move(player)
     puts "#{player.name} enter one choice (TL,TM,TR;ML,MM,MR;BL,BM,BR)"
     begin
-    choice = gets.chomp
+    choice = clearify
     x = convert_to_coordinate(choice) #expecting [1..3, 0..2]
     raise "nonempty cell" unless (@cells[x[0]][x[1]].empty?) #validate if the cell is empty
       @cells[x[0]][x[1]] = player.symbol
