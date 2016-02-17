@@ -1,5 +1,5 @@
 module Mechanism
-
+  
   def end_detector(answer)
     return false  if right_choice(answer) == :partial
     if right_choice(answer) == :full
