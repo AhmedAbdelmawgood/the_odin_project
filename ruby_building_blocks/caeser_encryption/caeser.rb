@@ -1,32 +1,35 @@
 
-def caeser(string,number)
-	@number = number
-	@alpha="abcdefghijklmnopqrstuvwxyz"
-	@alpha << @alpha.upcase
-	@alpha =  @alpha.split("")
-	step_one= string.split("")
-	step_one.map! {|x| 
-		if @alpha.index(x)
-			@inde = @alpha.index(x)
+def split_word(string)
+	string.split("")
+end
 
-			def action(iter_fact)
-				shift=@inde+@number
-				while shift >= iter_fact 
-					shift -= 26
-				end 
-				x = @alpha[shift]
-			end
+def prepare_collection
+	alpha = "abcdefghijklmnopqrstuvwxyz"
+	alpha << alpha.upcase
+	alpha =  alpha.split("")
+end
 
-			if @inde <=26
-				action(26)
-			else
-				action(52)
-			end
+def caeser(string, shift)
+	alpha = prepare_collection
+	sentence = split_word(string)
+	sentence.map! {|letter| 
+		if alpha.include?letter
+			index = alpha.index(letter)
+			shifting_number = index + shift
+			corrected_factor = (index <=26)? clear_shifting_range(26, shifting_number) : clear_shifting_range(52, shifting_number)
+			#puts "#{letter} t#{shifting_number}/#{corrected_factor}o  /#{index}/  #{alpha[corrected_factor]}"
+			letter = alpha[corrected_factor]	
 		else
-			x 
+			letter
 		end
 	 }
-	 step_one.join
+	 sentence.join
 end
-p caeser("ahmed samirZ",1)
+def clear_shifting_range(targe_range, shifting_number)
+	while shifting_number >= targe_range 
+	shifting_number -= 26
+	end 
+	shifting_number
+end
+p caeser("ahmedb samirZ",1)
 
