@@ -173,21 +173,23 @@ nav ul{
 	padding:0;
 }
 .btn_group input[type="text"]{
-	height:2.5em;
+	height:40px;
 	padding:10px;	
-	width:14em;
+	width:250px;
 	border-radius: 10px;
 	border:1px solid rgb(178,178,178);
-	font-size:1.5em;
+	font-size:1em;
 	color:black;
+	font-weight:100;
 }
 .btn_group input[type="button"]{
 	margin-left: -5px;
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
-	height:2.65em;
-	width:5.2em;
+	height:40px;
+	width:110px;
 	padding:10px;
+	padding-top:5px;
 	border:none;
 	color:white;
 	font-size:1.4em;
@@ -285,4 +287,37 @@ ul.wordpress{
 	font-weight: bold;
 	color:black;
 	font-size:1.15em;
+}
+.news{
+	width:95%;
+	background-color: rgb(247,247,247);
+	margin:50px 0px 50px -20px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	padding:30px 10px; 
+
+
+}
+.news a.newsletter_link{
+	color:rgb(56,183,216);
+	font-size:1.5em;
+	font-weight:bold;
+	text-decoration:none;
+	display: block;
+	height:30px;
+	margin:10px;
+	margin-bottom: 20px;
+	text-align: center;
+	position:relative;
+}
+
+.news a img{
+	position:absolute;
+	top:5;
+	left:0;
+}
+.news p{
+	line-height: 1.7em;
+	font-size:.80em;
+	text-align: justify;
 }
