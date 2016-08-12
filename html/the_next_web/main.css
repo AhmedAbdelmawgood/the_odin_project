@@ -1,0 +1,436 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*Reset*/
+/*Reset*/
+/*clearfix*/
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  clear: both;
+  *zoom: 1;
+}
+/*clearfix*/
+@font-face{
+	font-family: "Avalon";
+    font-style: normal;
+    font-weight: 700;
+    src: url("http://cdn1.tnwcdn.com/wp-content/themes/cyberdelia/assets/fonts/avalon-bold.eot?#iefix") format("embedded-opentype"), url("http://cdn2.tnwcdn.com/wp-content/themes/cyberdelia/assets/fonts/avalon-bold.woff") format("woff"), url("http://cdn3.tnwcdn.com/wp-content/themes/cyberdelia/assets/fonts/avalon-bold.ttf") format("truetype");
+}
+*{
+	box-sizing: border-box;
+}
+
+section{
+	margin:10px 0px;
+/*	border:1px solid black;
+*/}
+.newly_news{
+	margin-top: 44px;
+}
+.hidden{
+	display: none;
+}
+.hide{
+	display: none;
+}
+header{
+	margin-bottom: 15px;
+}
+header span{
+
+	height:50px;
+}
+/*width*/
+
+header .logo{
+	width:110px;
+	background:rgba(0, 0, 0, 0) linear-gradient(to right bottom, #c09, #f42 85%) repeat scroll 0 0;
+	color:white;
+	text-align: center;
+	line-height: 50px;
+}
+.search{
+	width:10%;
+	background:url('search.png') 50% 50%;
+	background-repeat: no-repeat;
+	background-size: 28px 28px;
+	border-left:1px solid #eaeaea;
+}
+.bar{
+	width:10%;
+	border-left:1px solid #eaeaea;
+	line-height: 50px;
+}
+.high_nav{
+	background-color: rgb(0,0,0);
+	font-size:.75em;
+	color:white;
+}
+/*Hot news style*/
+.newly_news article{
+	height:250px;
+	margin:5% 1.2%;
+	position:relative;
+}
+.newly_news article a,.hot_news a{
+	display: block;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index: 99;
+	background: rgba(0, 0, 0, 0.25) url("image-gardient.png") no-repeat scroll 0 0 / 100% 100%;
+	filter:opacity(.5);
+	width:100%;
+	height:100%;
+}
+.news .background_image{
+	z-index:1;
+	width:100%;
+	height:100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+/**/
+/*news header*/
+.news_header{
+	z-index:999999;
+	width:100%;
+	position:absolute;
+	bottom:0;left:0;
+	padding:2.5%;
+}
+.news_header p{
+	font-size:1.15em;
+	width:100%;
+	color:white;
+	/*height:85%;*/
+}
+ul.editing_info{
+	list-style:none;
+	margin:0 auto;
+}
+.editing_info li{
+	float:left;
+	margin:2.5%;
+	text-align: center;
+	color:whitesmoke;
+}
+/**/
+/*cover links*/
+.first_item .background_image{
+	background-image:url("http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2016/08/ii_1565733368971a27-796x531.jpeg") ;	
+}
+.second_item .background_image{
+	background-image: url("http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2016/08/13886389_10157402674580195_9108266345029371165_n-796x597.jpg");
+
+}
+.third_item .background_image{
+	background-image: url("http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2016/08/henderson-featured-1-1-796x455.jpg");
+}
+.fourth_item .background_image{
+	background-image: url("http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2016/08/slack-tattoos-796x361.jpg");
+}
+/**/
+
+/*Latest news*/
+.latest_news_heading{
+	padding:1%;
+	margin-bottom: 20px;
+	font-family: "Avalon"
+}
+.latest_news_heading a,.heading a{
+	color:#f42;
+	text-decoration: none;
+	font-size:2em;
+}
+.latest_news_heading a:hover,.heading a:hover{
+	text-decoration: none;
+	color:black;
+}
+.news_block span{
+	display: block;
+	margin:20px 0;
+}
+.news_block span:last-child{
+	margin-bottom:5px;
+}
+.news_block{
+	float:left;
+	width:23%;
+	margin:1%;
+	position:relative;
+}
+.news_block  img{
+	display:block;
+	width:100%;
+	height:100px;
+}
+.news_block .latest_news_desc{
+	padding:0 2%;
+	font-weight: bold;
+	font-family: sans-serif;
+}
+.news_block .latest_editing{
+	font-size:.75em;
+	font-color:whitesmoke;
+	padding:.5%;
+}
+.news_block .latest_editing span{
+	display: inline-block;
+	width:35%;
+	margin:1.5%;
+}
+/**/
+/*Different Categories style*/
+.diff_categ article{
+	width:98%;
+	margin:2% 1%;
+
+}
+.hot_news{
+	width:100%;
+	position:relative;
+	margin-bottom: 0;
+}
+.cate_latest_news{
+	width:100%;
+	min-height:106px;
+	padding:1.5%;
+	background: #FFF4F2;
+	position:relative;
+}
+.cate_latest_news > a{
+	position: absolute;
+	top:0;
+	right:0;
+	height:100%;
+	width:20%;
+	background-size: cover;
+
+}
+.cate_latest_news h4{
+	font-size: 0.76em;
+	color:#FF4927;
+	padding-top:1%;
+}
+.cate_latest_news p{
+	font-weight: bold;
+	color:#FF4422;
+	font-size:.9em;
+	padding-top:1%;
+}
+ul.cate_news li{
+	padding:1.2% 0;
+	border-bottom:1px solid #f4f4f4;
+	font-size:.80em;
+}
+ul.cate_news li:before{
+	content:"• ";
+	color:red;
+}
+.heading{
+	margin-bottom: 4%;
+}
+.apps .background_image{
+	background-image: url("http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2016/08/Pokemon-China-368x276.jpg");
+}
+.hot_news .background_image{
+	min-height:260px;
+}
+section.latest_news {
+	max-width:1203px;
+	margin:0 auto;
+}
+/**/
+@media only screen and (max-device-width:759px){
+	.search,.bar,.logo{
+		display:block;
+		text-align: center;
+		display: block;
+		border-collapse: collapse;		
+	}
+	header{
+		border-bottom:1px solid red;
+	}
+	.news_block{
+		float:none;
+		width:100%;
+		/*height:50px;*/
+	}
+	.news_block img{
+		height:58px;
+		width:10%;
+		float:left;
+	}
+	.news_block .latest_news_desc{
+		font-size:1em;
+	}
+	.news_block .latest_news_desc, .news_block .latest_editing{
+		/*display: inline-block;*/
+		float:left;
+		/*vertical-align: top;*/
+		height:43%;
+		width:80%;
+		margin:0;
+	}
+	.news_block span:last-child{
+		margin-bottom:0px;
+	}
+	/*Clearing when low resoluation only*/
+	.news_block:before,
+	.news_block:after {
+  		content: "";
+  		display: table;
+	}
+	.news_block:after {
+  		clear: both;
+	}
+	.news_block {
+  	clear: both;
+  	*zoom: 1;
+	}
+	.hot_news .background_image{
+	min-height:360px;
+}
+	/**/		
+}
+@media only screen and (min-device-width:759px) and (max-device-width:920px) {
+	.first_item .news_header p{
+		font-size:2.85em;
+		font-weight: bold;
+	}
+	.newly_news article{
+		margin:5px;
+	}
+	.newly_news .second_item,.newly_news .third_item,.newly_news .fourth_item{
+		float:left;
+		width:32%;
+		height:150px;
+	}
+	.news_block{
+		width:31.3333%;
+	}
+	.diff_categ article{
+		width:48%;
+		margin:2% 1%;
+		float:left;
+	}
+	.cate_latest_news > a{
+		width:35%;
+	}
+	.cate_latest_news p{
+		width:64%;
+	}
+}
+@media only screen and (min-device-width:920px){
+	.newly_news .first_item {
+		height:600px;
+		width:47.5%;
+		float:left;
+		margin:0 .4%;
+	}
+	article.second_item{
+		height:300px;
+		float:right;
+		width:50.8%;
+		margin:.4%;
+	}
+	.newly_news article.third_item,.newly_news article.fourth_item{
+		width:25%;
+		height:280px;
+		margin:.4%;
+		float:right;
+	}
+	.first_item .news_header p{
+		font-size:2.85em;
+		font-weight: bold;
+	}
+	.diff_categ article{
+		width:31.333%;
+		margin:2% 1%;
+		float:left;
+	}		
+	.cate_latest_news > a{
+		width:33%;
+	}
+	.cate_latest_news p{
+		width:71%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ul.nav{
+	width:auto;
+	list-style:none;
+	width:20%;
+}
+.nav li{
+	float:left;
+	width:25%;
+}
+
+.right{
+	float:right;
+}
+.left{
+	float:left;
+}
